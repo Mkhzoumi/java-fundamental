@@ -3,8 +3,7 @@
  */
 package basiclibrary;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -36,6 +35,26 @@ public class Library {
         };
 
         System.out.println("array of the lowest avg " + Arrays.toString(arrOfArrMinAvg(weeklyMonthTemperatures)));
+
+
+
+        System.out.println(analyzingWeatherData(weeklyMonthTemperatures));
+
+
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+
+        String winner = tally(votes);
+        System.out.println(winner + " received the most votes!");
 
     }
 
@@ -86,5 +105,55 @@ public class Library {
         return arrOfLeast;
     }
 
+
+    public static String analyzingWeatherData(int[][] arr){
+        int highest = arr[0][0] ;
+        int lowest = arr[0][0];
+        HashSet<Integer> temp = new HashSet<Integer>();
+
+        for (int[] ints : arr) {
+            for (int anInt : ints) {
+                if (anInt > highest) {
+                    highest = anInt;
+                }
+                if (anInt < lowest) {
+                    lowest = anInt;
+                }
+                temp.add(anInt);
+            }
+        }
+        String neverSaw = "";
+        for (int i = lowest; i < highest; i++) {
+            if (!temp.contains(i)){
+                neverSaw+= ("\nnever saw temperature "+i);
+            }
+        }
+
+        System.out.println("highest temperature: " + highest);
+        System.out.println("lowest temperature: " + lowest);
+
+        return neverSaw;
+    }
+
+    public static String tally(List<String> votes){
+        HashMap<String,Integer> newOrderedVotes = new HashMap<String,Integer>();
+        String winner = "";
+        int maxVotes = 0;
+
+        for (String vote : votes) {
+            if (!newOrderedVotes.containsKey(vote)) {
+                newOrderedVotes.put(vote, 1);
+            } else {newOrderedVotes.put(vote ,newOrderedVotes.get(vote)+1 );
+
+            }
+        }
+        for (Map.Entry<String, Integer> entry : newOrderedVotes.entrySet()){
+            if (entry.getValue() > maxVotes){
+                maxVotes = entry.getValue();
+                winner = entry.getKey();
+            }
+        }
+        return winner;
+    }
 
 }
