@@ -35,7 +35,7 @@ class AppTest {
 
 
 
-        // testing for a one error js file
+        // testing for a some error js file
         String someErrOut = "Line 3: Missing semicolon.\n"+"Line 5: Missing semicolon.\n";
         Path someErrorsFile = Paths.get("src/main/resources/testSomeError.js");
 
@@ -43,5 +43,18 @@ class AppTest {
 
 
 
+        // testing for a many error js file
+        String manyErrOut = "Line 3: Missing semicolon.\n"+"Line 5: Missing semicolon.\n"+"Line 10: Missing semicolon.\n"+"Line 11: Missing semicolon.\n"+"Line 12: Missing semicolon.\n"+"Line 13: Missing semicolon.\n"+"Line 14: Missing semicolon.\n";
+        Path manyErrorsFile = Paths.get("src/main/resources/testManyError.js");
+
+        assertEquals(manyErrOut,javaScriptLinter(manyErrorsFile));
+
+
+
+        // testing for an empty js file
+        String emptyErrOut = "";
+        Path emptyFile = Paths.get("src/main/resources/empty.js");
+
+        assertEquals(emptyErrOut,javaScriptLinter(emptyFile));
     }
 }

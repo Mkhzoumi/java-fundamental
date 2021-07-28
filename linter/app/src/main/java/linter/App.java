@@ -19,7 +19,7 @@ public class App {
 
 
 
-        Path jsFile = Paths.get("gates.js");
+        Path jsFile = Paths.get("app/src/main/resources/gates.js");
         System.out.println(javaScriptLinter(jsFile));
 
     }
