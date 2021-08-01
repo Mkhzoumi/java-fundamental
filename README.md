@@ -195,3 +195,79 @@
 └── settings.gradle
 
 ```
+
+## inheritance directory tree
+
+```
+.
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── lib
+│   ├── build
+│   │   ├── classes
+│   │   │   └── java
+│   │   │       ├── main
+│   │   │       │   └── inheritance
+│   │   │       │       ├── Library.class
+│   │   │       │       ├── Restaurant.class
+│   │   │       │       └── Review.class
+│   │   │       └── test
+│   │   │           └── inheritance
+│   │   │               └── LibraryTest.class
+│   │   ├── generated
+│   │   │   └── sources
+│   │   │       ├── annotationProcessor
+│   │   │       │   └── java
+│   │   │       │       ├── main
+│   │   │       │       └── test
+│   │   │       └── headers
+│   │   │           └── java
+│   │   │               ├── main
+│   │   │               └── test
+│   │   ├── reports
+│   │   │   └── tests
+│   │   │       └── test
+│   │   │           ├── classes
+│   │   │           │   └── inheritance.LibraryTest.html
+│   │   │           ├── css
+│   │   │           │   ├── base-style.css
+│   │   │           │   └── style.css
+│   │   │           ├── index.html
+│   │   │           ├── js
+│   │   │           │   └── report.js
+│   │   │           └── packages
+│   │   │               └── inheritance.html
+│   │   ├── test-results
+│   │   │   └── test
+│   │   │       ├── TEST-inheritance.LibraryTest.xml
+│   │   │       └── binary
+│   │   │           ├── output.bin
+│   │   │           ├── output.bin.idx
+│   │   │           └── results.bin
+│   │   └── tmp
+│   │       ├── compileJava
+│   │       │   └── previous-compilation-data.bin
+│   │       ├── compileTestJava
+│   │       │   └── previous-compilation-data.bin
+│   │       └── test
+│   ├── build.gradle
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── inheritance
+│       │   │       ├── Library.java
+│       │   │       ├── Restaurant.java
+│       │   │       └── Review.java
+│       │   └── resources
+│       └── test
+│           ├── java
+│           │   └── inheritance
+│           │       └── LibraryTest.java
+│           └── resources
+└── settings.gradle
+
+```
