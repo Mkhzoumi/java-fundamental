@@ -16,8 +16,8 @@ public class Restaurant {
         this.priceCat = priceCat;
     }
 
-    public void addReview(String auther , float stars){
-        Review newReview = new Review(auther , stars);
+    public void addReview(String auther ,String body, float stars){
+        Review newReview = new Review(auther ,body, stars);
         this.starsSum+= newReview.getStars();
         this.reviewscounter+=1;
         this.stars = this.starsSum/this.reviewscounter;

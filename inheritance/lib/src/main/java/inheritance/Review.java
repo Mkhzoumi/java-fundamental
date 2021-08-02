@@ -4,7 +4,7 @@ public class Review {
     private String body;
     private String auther;
     private float stars;
-    public Review(String auther , float stars ){
+    public Review(String auther , String body , float stars ){
         if (stars > 5){
             this.stars = 5;
         }else if (stars < 0){
@@ -14,6 +14,7 @@ public class Review {
         }
 
         this.auther = auther;
+        this.body = body;
     }
 
     public String getBody() {
@@ -42,7 +43,7 @@ public class Review {
 
     @Override
     public String toString() {
-        return auther+" "+
-                "rate =" + stars+" stars " ;
+        return auther+" ( said: "+body+", "+
+                "and rate it with =" + stars+" stars) " ;
     }
 }

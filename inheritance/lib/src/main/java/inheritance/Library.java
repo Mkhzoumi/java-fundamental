@@ -12,9 +12,9 @@ public class Library {
 
         Restaurant newRestaurant = new Restaurant("humam",4);
 
-        newRestaurant.addReview("ahmed" , 5);
-        newRestaurant.addReview("humam" , 3.5f);
-        newRestaurant.addReview("zaid" , 5);
+        newRestaurant.addReview("ahmed" ,"amazing", 5);
+        newRestaurant.addReview("humam" ,"i like it", 3.5f);
+        newRestaurant.addReview("zaid" ,"delicous" ,5);
 
         System.out.println(newRestaurant);
     }

@@ -22,14 +22,14 @@ class LibraryTest {
 
 
         //review test
-        Review testReview = new Review("testing",4);
+        Review testReview = new Review("testing", "i love it",4);
 
-        assertEquals("testing rate =4.0 stars ",testReview.toString());
+        assertEquals("testing ( said: i love it, and rate it with =4.0 stars) ",testReview.toString());
 
 
         // addReview method test
-        testRestaurant.addReview("humam",3);
-        assertEquals("Restaurant{Name='SubWay',Rate out of 5 stars=3.0, Price Category=5.0$, reviews=[humam rate =3.0 stars ]}" , testRestaurant.toString());
+        testRestaurant.addReview("humam","i like it",3);
+        assertEquals("Restaurant{Name='SubWay',Rate out of 5 stars=3.0, Price Category=5.0$, reviews=[humam ( said: i like it, and rate it with =3.0 stars) ]}" , testRestaurant.toString());
 
 
 
