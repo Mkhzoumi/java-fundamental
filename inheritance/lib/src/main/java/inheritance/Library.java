@@ -10,12 +10,27 @@ public class Library {
 
     public static void main(String[] args) {
 
-        Restaurant newRestaurant = new Restaurant("humam",4);
+//        Restaurant newRestaurant = new Restaurant("humam",4);
+//
+//        newRestaurant.addReview("ahmed" ,"amazing", 5);
+//        newRestaurant.addReview("humam" ,"i like it", 3.5f);
+//        newRestaurant.addReview("zaid" ,"delicous" ,5);
 
-        newRestaurant.addReview("ahmed" ,"amazing", 5);
-        newRestaurant.addReview("humam" ,"i like it", 3.5f);
-        newRestaurant.addReview("zaid" ,"delicous" ,5);
+//        System.out.println(newRestaurant);
 
-        System.out.println(newRestaurant);
+
+
+        Shop newShop = new Shop("shatha" ,"em 3youn" , 4);
+
+        newShop.shopReview("humam" , "test" , 4);
+        System.out.println(newShop);
+
+
+        Theater newThea = new Theater("testing");
+        newThea.addMovie("anything");
+        newThea.addMovie("anything");
+        newThea.addReview("humam", "i like this movie",4 , "anything" );
+
+        System.out.println(newThea);
     }
 }
